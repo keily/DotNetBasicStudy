@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicLearn.Reflection.Part1", "BasicLearn.Reflection.Part1\BasicLearn.Reflection.Part1.csproj", "{6CB7A76E-D3C8-4E13-A71C-11422CAFEE67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicLearn.Reflection.Part2_Emit", "BasicLearn.Reflection.Part2_Emit\BasicLearn.Reflection.Part2_Emit.csproj", "{0A8EE2C3-0BFF-468B-ABC5-752D057CCE67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicLearn.Thread.Part1", "BasicLearn.Thread.Part1\BasicLearn.Thread.Part1.csproj", "{EB0D6A22-EA33-4831-80E4-06F685F4BDAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +17,14 @@ Global
 		{6CB7A76E-D3C8-4E13-A71C-11422CAFEE67}.Debug|x86.Build.0 = Debug|x86
 		{6CB7A76E-D3C8-4E13-A71C-11422CAFEE67}.Release|x86.ActiveCfg = Release|x86
 		{6CB7A76E-D3C8-4E13-A71C-11422CAFEE67}.Release|x86.Build.0 = Release|x86
+		{0A8EE2C3-0BFF-468B-ABC5-752D057CCE67}.Debug|x86.ActiveCfg = Debug|x86
+		{0A8EE2C3-0BFF-468B-ABC5-752D057CCE67}.Debug|x86.Build.0 = Debug|x86
+		{0A8EE2C3-0BFF-468B-ABC5-752D057CCE67}.Release|x86.ActiveCfg = Release|x86
+		{0A8EE2C3-0BFF-468B-ABC5-752D057CCE67}.Release|x86.Build.0 = Release|x86
+		{EB0D6A22-EA33-4831-80E4-06F685F4BDAC}.Debug|x86.ActiveCfg = Debug|x86
+		{EB0D6A22-EA33-4831-80E4-06F685F4BDAC}.Debug|x86.Build.0 = Debug|x86
+		{EB0D6A22-EA33-4831-80E4-06F685F4BDAC}.Release|x86.ActiveCfg = Release|x86
+		{EB0D6A22-EA33-4831-80E4-06F685F4BDAC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
