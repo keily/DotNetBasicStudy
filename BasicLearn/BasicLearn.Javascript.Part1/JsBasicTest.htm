@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <title></title>
+    <script type="text/javascript">
+        var s_len = "test";
+        s_len.len = 10;
+        console.log(s_len.len);
+
+        var new_s_len = new String("test");
+        new_s_len.len = 10;
+        console.log(new_s_len.len);
+
+        var s = "Test", S = new String("Test");
+        console.log(s == S); //true
+        console.log(s === S); //false
+        
+        //javascript 
+        var Global_Object = this;
+        eval('var obj=1;');
+        console.log(Global_Object.obj);
+        (function () { 
+            eval('var bar=\'bar\';');
+            console.log(bar);
+            console.log(s);
+        })();
+
+        //把ClassA的一个实例赋值给ClassB ClassB就继承了ClassA的所有属性
+        function classA() {
+            this.a = 'a';
+            this.arr = [];
+            this.foo = function () {
+                console.log('helo');
+            };
+        }
+        function classB() {
+            this.b = 'b';
+        }
+        classB.prototype = new classA();
+        var objB = new classB();
+        for (var p in objB) document.write(p + '<br>');
+        //从原型继承理论的角度去考虑 js的原型继承是引用原型 不是复制原型
+        //所以 修改原型会导致所有B的实例的变化
+        console.log(objB.a);
+        classB.prototype.a = 'a1';
+        console.log(objB.a);
+        //然而 子类对象的写操作只访问子类对象中成员 它们之间不会互相影响
+        //因此 写是写子类 读是读原型（如果子类中没有的话）
+        var objB1 = new classB();
+        var objB2 = new classB();
+        //每个子类对象都执有同一个原型的引用 所以子类对象中的原型成员实际是同一个
+        console.log(objB1.a === objB2.a);
+        console.log(objB1.b === objB2.b);
+        
+        objB1.b = 'b1';
+        console.log(objB1.b);
+        console.log(objB2.b);
+        //a是值类型，所以修改后所以instance的值会变化
+        objB1.a = 'b1_a';
+        console.log(objB1.a);
+        console.log(objB2.a);
+        //在子类对象中访问原型的成员对象：,因为arr是对象，所以所有instance的arr是一样的
+        objB1.arr.push(1, 2, 3);
+        console.log(objB1.arr);
+        console.log(objB2.arr);
+        //objB1.foo();
+        //----总结：所以 在prototype继承中 原型类中不能有成员对象！ 所有成员必须是值类型数据（string也可以）
+
+
+
+        function C() { this.a = 42; }
+        C.prototype.x = 12;
+        C.prototype.y = 13;
+        var o = new C();
+        console.log(typeof o.a);
+        console.log(o.a);     // 42, 构造函数中定义的o.x
+        delete o.a;     //true 删除的是自身定义的x
+        console.log(o.a);     // 12,  prototype中定义的o.x，即使再次执行delete o.x也不会被删除
+        delete o.y;     //true，因为 o自身没有o.y属性，y存在于prototype链中，也就是说对象自身属性和prototype属性是不同的
+        console.log(o.y);     //13
+
+        //delete VS splice
+        var myArray = ['a', 'b', 'c', 'd'];
+        console.log("delete myArray[1]");
+        delete myArray[1];
+        for (var i = 0; i < myArray.length; i++) {
+            console.log(myArray[i]);
+        }
+        console.log("splice(0, 2)");
+        myArray.splice(0, 2);
+        for (var i = 0; i < myArray.length; i++) {
+            console.log(myArray[i]);
+        }
+        var myArray_a = ['e', 'f'];
+        myArray_a.push.apply(myArray, myArray_a);
+        var myintArray = [1, 2, 3];
+        console.log(Math.max.apply(null, myintArray));
+        //statistic precent times a number in an array
+        var temp = "This is a string.";
+        var count = temp.match(/i/g).length;
+        console.log(''+/is/g+''+count);
+
+        /**定义一个animal类*/
+        function Animal() {
+            this.name = "Animal";
+            this.sex = 'men';
+            this.showName = function () {
+                console.log(this.name);
+            }
+            this.showSex = function () { console.log(this.sex); }
+        }
+        /**定义一个Cat类*/
+        function Cat() {
+            this.name = "Cat";
+        }
+        /**创建两个类对象*/
+        var animal = new Animal();
+        var cat = new Cat();
+        //通过call或apply方法，将原本属于Animal对象的showName()方法交给当前对象cat来使用了。
+        animal.showName.call(cat); //输入结果为"Cat"
+        animal.showName.apply(cat);
+        //
+        Animal.call(cat);
+        //cat.name = 'cat1';
+        cat.showName();
+
+        function print(a, b) {
+            console.log(a + b);
+        }
+        function test(a, b) {
+            //用call方式借用print,参数显式打散传递
+            print.call(this, a, b);
+            //这里直接用JavaScript方法内本身有的arguments数组 print.apply(this.arguments);
+            print.apply(this, [a, b]);
+        }
+        test('sd', 'gf');
+
+
+        //取URL中的参数
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)')
+                    .exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+        window.onload = function () {
+            $("#btnGetParams").bind('click', function () {
+                var _val = getParameterByName($("#txt_url").val());
+                $("#result_params").html(_val);
+            });
+            /*
+            $.ajax({
+                url: "http://www.cnblogs.com",
+                type: "POST",
+                success: function (msg) {
+                    console.log(msg);
+                } 
+            });*/
+        }
+        
+    </script>
+</head>
+<body>
+<div id="testArea" style="width:50px;height:50px; background-color:Yellow">
+    url:<input type="text" id="txt_url" />
+    <input type="button" id="btnGetParams" value="getParams"  style="width:80px;"/>
+    <div id="result_params"></div>
+</div>
+</body>
+</html>

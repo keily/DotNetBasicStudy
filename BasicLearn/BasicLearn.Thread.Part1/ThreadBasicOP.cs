@@ -29,8 +29,27 @@ namespace BasicLearn.Thread.Part1
             }
             Console.ReadKey();
         }
+        //带参数的多线程调用
+        public void printInfo2()
+        {
+            Console.WriteLine("MainThread ManagedThreadId is :" + System.Threading.Thread.CurrentThread.ManagedThreadId);
+            System.Threading.Thread[] testThread = new System.Threading.Thread[5];
+            for (int i = 0; i < 5; i++)
+            {
+                //调用方法必须不能有返回值
+                testThread[i] = new System.Threading.Thread(new ParameterizedThreadStart(Power));
+                //方法参数类型必须是object
+                testThread[i].Start(i);
+            }
+            Console.ReadKey();
+        }
+        //调用方法必须不能有返回值，方法参数类型必须是object
+        public void Power(object mi) {
+            System.Threading.Thread.Sleep(3000);
+            Console.WriteLine((int)mi * (int)mi);
+        }
         //常规多线程调用,会导致数据访问不安全
-        private void Add()
+        public void Add()
         {
             Console.WriteLine("CurrentThread ManagedThreadId is :" + System.Threading.Thread.CurrentThread.ManagedThreadId);
             Random random = new Random();

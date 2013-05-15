@@ -12,7 +12,7 @@ namespace BasicLearn.Thread.Part1
         public ShowMSGDelegate ComputeDelegate;
         //监控子线程调用过程运算结果的变量
         private int WatchVarInter = 0;
-
+        //异步方式
         public void printInfo()
         {
             Console.WriteLine("MainThread ManagedThreadId is :" + System.Threading.Thread.CurrentThread.ManagedThreadId);
@@ -28,7 +28,7 @@ namespace BasicLearn.Thread.Part1
 
             Console.ReadKey();
         }
-        //异步方式
+        //同步方式
         public void printInfo2()
         {
             Console.WriteLine("MainThread ManagedThreadId is :" + System.Threading.Thread.CurrentThread.ManagedThreadId);

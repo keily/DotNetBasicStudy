@@ -1,0 +1,5 @@
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Javascript.Part1\bin\BasicLearn.Javascript.Part1.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Javascript.Part1\bin\BasicLearn.Javascript.Part1.pdb
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Javascript.Part1\obj\Debug\ResolveAssemblyReference.cache
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Javascript.Part1\obj\Debug\BasicLearn.Javascript.Part1.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Javascript.Part1\obj\Debug\BasicLearn.Javascript.Part1.pdb

@@ -30,10 +30,11 @@ namespace BasicLearn.Reflection.Part2_Emit
         static void DynamicCallMethodByDelegate() {
             MethodInfo method = typeof(MathMatic).GetMethod("Movebits");
             Type[] parameterType = { typeof(MathMatic), typeof(int), typeof(int) };
-            DynamicMethod dynamicMethod = new DynamicMethod("", typeof(int), parameterType);
+            DynamicMethod dynamicMethod = new DynamicMethod("Movebits", typeof(int), parameterType);
             ILGenerator il = dynamicMethod.GetILGenerator();
             il.Emit(OpCodes.Ldarg_0);
             il.Emit(OpCodes.Ldarg_1);
+            il.Emit(OpCodes.Ldarg_2);
             il.Emit(OpCodes.Callvirt, method);
             il.Emit(OpCodes.Ret);
             AddDelegate hellodelegate = (AddDelegate)dynamicMethod.CreateDelegate(typeof(AddDelegate));
@@ -73,7 +74,7 @@ namespace BasicLearn.Reflection.Part2_Emit
             // to do this, load the onto the stack and return.
             il.Emit(OpCodes.Ldarg_1);
             il.Emit(OpCodes.Ret);
-            /*
+            
             // Display MethodAttributes for the dynamic method, set when 
             // the dynamic method was created.
             Console.WriteLine("\r\nMethod Attributes: {0}", hello.Attributes);
@@ -152,7 +153,7 @@ namespace BasicLearn.Reflection.Part2_Emit
                 Console.WriteLine("\t{0}, {1}, {2}",
                     p.Name, p.ParameterType, p.Attributes);
             }
-            */
+            
             // Create a delegate that represents the dynamic method. 
             //This action completes the method, and any further attempts to change the method will cause an exception.
             HelloDelegate hi = (HelloDelegate)hello.CreateDelegate(typeof(HelloDelegate));
