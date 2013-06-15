@@ -3,3 +3,4 @@ F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Thread.Part1
 F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Thread.Part1\obj\x86\Debug\ResolveAssemblyReference.cache
 F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Thread.Part1\obj\x86\Debug\BasicLearn.Thread.Part1.exe
 F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Thread.Part1\obj\x86\Debug\BasicLearn.Thread.Part1.pdb
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Thread.Part1\bin\Debug\Config\Data.xml

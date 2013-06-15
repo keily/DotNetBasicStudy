@@ -13,6 +13,7 @@ namespace BasicLearn.Thread.Part1
     {
         static void Main(string[] args)
         {
+            /*
             //多线程显示方式实现
             ThreadBasicOP asyncthread = new ThreadBasicOP();
             //不带参数的多线程基本调用
@@ -28,6 +29,14 @@ namespace BasicLearn.Thread.Part1
             muticastDelegateThread.printInfo2();
             //线程阻塞（同步）方式
             muticastDelegateThread.printInfo3();
+             * */
+
+            //System.Threading.Timer 方式
+            //SafeThreadTimer stimer1 = new SafeThreadTimer();
+            //System.Timers.Timer方式
+            SafeTimersTimer stimer2 = new SafeTimersTimer();
+
+            Console.ReadKey();
         }
     }   
     

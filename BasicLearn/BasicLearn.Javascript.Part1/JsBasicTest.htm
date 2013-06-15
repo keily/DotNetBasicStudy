@@ -3,6 +3,8 @@
 <head>
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <title></title>
+    <script src="Scripts/JsHierarchy.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         var s_len = "test";
         s_len.len = 10;
@@ -74,7 +76,7 @@
         C.prototype.y = 13;
         var o = new C();
         console.log(typeof o.a);
-        console.log(o.a);     // 42, 构造函数中定义的o.x
+        console.log('o.a:' + o.a);     // 42, 构造函数中定义的o.x
         delete o.a;     //true 删除的是自身定义的x
         console.log(o.a);     // 12,  prototype中定义的o.x，即使再次执行delete o.x也不会被删除
         delete o.y;     //true，因为 o自身没有o.y属性，y存在于prototype链中，也就是说对象自身属性和prototype属性是不同的
@@ -136,6 +138,8 @@
         }
         test('sd', 'gf');
 
+        var jsonStr2 = '{"Name":"Tom","Sex":"Man"}';
+        console.log(eval('(' + jsonStr2 + ')'));
 
         //取URL中的参数
         function getParameterByName(name) {
