@@ -1,0 +1,5 @@
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Test\bin\Debug\BasicLearn.Test.exe
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Test\bin\Debug\BasicLearn.Test.pdb
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Test\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Test\obj\x86\Debug\BasicLearn.Test.exe
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\BasicLearn.Test\obj\x86\Debug\BasicLearn.Test.pdb

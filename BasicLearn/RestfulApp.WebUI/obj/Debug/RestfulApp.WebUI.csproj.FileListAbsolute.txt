@@ -1,0 +1,5 @@
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.WebUI\bin\RestfulApp.WebUI.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.WebUI\bin\RestfulApp.WebUI.pdb
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.WebUI\obj\Debug\ResolveAssemblyReference.cache
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.WebUI\obj\Debug\RestfulApp.WebUI.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.WebUI\obj\Debug\RestfulApp.WebUI.pdb

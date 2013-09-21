@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery.tmpl.min.js" type="text/javascript"></script>
+    <script src="../Scripts/knockout-1.2.1.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var personViewModel = {
+            tickets: [
+                { name: "Economy", price: 199.95 },
+                { name: "Business", price: 449.22 },
+                { name: "First Class", price: 1199.99 }
+            ],
+            chosenTicket: ko.observable(),
+            resetTicket: function () { this.chosenTicket(null) },
+            //banding person
+            personInfo: ko.observableArray([])
+        };
+
+        $(document).ready(function () {
+            
+            $.ajax({
+                type: "GET",
+                url: "http://www.keily.com/restfulservices/person/persondetail",
+                //data: "{}",
+                //contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (obj) {
+                    console.log(obj);
+                    personViewModel.personInfo(obj)                    
+                },
+                error: function (msg) {
+                    alert(msg);
+                }
+            });
+
+            ko.applyBindings(personViewModel);
+        });
+        
+    </script>
+</head>
+<body>
+Choose a ticket class:
+    <select data-bind="options: tickets, 
+                       optionsCaption: 'Choose...',
+                       optionsText: 'name',
+                       value: chosenTicket">
+    </select>
+    <p data-bind="template: 'ticketTemplate'">
+    </p>
+    <script id="ticketTemplate" type="text/html">
+        {{if chosenTicket}}
+            You have chosen <b>${ chosenTicket().name }</b>
+            ($${ chosenTicket().price })
+            <button data-bind="click: resetTicket">Clear</button>
+        {{/if}}
+    </script>
+    <div style="height:20px;color:Red;">        
+    </div>
+
+    <div id="personListContrainer"  data-bind="template:{name:'personListTmpl'}">        
+    </div>
+    <script type="text/html" id="personListTmpl">
+        <table cellspacing="0" cellpadding="0" width="100%" id="tbPersonQueryList">
+			<thead id="theadQueryList">
+				<tr>
+					<th style="width=0;display:none"></th>
+					<th width="80">Name</th>
+                    <th width="80">NickName</th>
+					<th width="70">Age</th>
+					<th width="70">Property</th>
+                    <th width="70">Description</th>
+				</tr>
+		    </thead>
+				 {{each(i, p) personInfo()}}
+	             <tr class="">
+                        <td  style="display:none"> <span data-bind="text: UID"></span></td>
+                        <td> <span data-bind="text: Name"></span></td>
+                        <td> <span data-bind="text: NickName"></span></td>
+                        <td> <span data-bind="text: Age"></span></td>
+                        <td> <span data-bind="text: Property"></span></td>
+						<td> <span data-bind="text: Description"></span></td>
+				</tr>
+				 {{/each}}
+		</table>
+    </script>
+</body>
+</html>

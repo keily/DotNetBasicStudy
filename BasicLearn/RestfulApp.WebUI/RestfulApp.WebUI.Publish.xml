@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://www.keily.com/WebUI" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="07/21/2013 22:43:27" />
+    <file relUrl="Scripts/jquery.tmpl.min.js" publishTime="07/21/2013 23:04:10" />
+    <file relUrl="Site.Master" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Account/Web.config" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Models/PersonManage.htm" publishTime="07/21/2013 23:05:22" />
+    <file relUrl="Account/Register.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="bin/RestfulApp.WebUI.pdb" publishTime="07/21/2013 21:03:49" />
+    <file relUrl="Scripts/knockout-2.0.0.js" publishTime="07/21/2013 20:47:17" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Account/Login.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Styles/Site.css" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Global.asax" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Scripts/knockout-1.2.1.js" publishTime="07/21/2013 23:04:10" />
+    <file relUrl="bin/RestfulApp.WebUI.dll" publishTime="07/21/2013 21:03:49" />
+    <file relUrl="About.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Default.aspx" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="07/21/2013 17:57:00" />
+    <file relUrl="Scripts/jquery.boxy.js" publishTime="07/21/2013 20:47:17" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="07/21/2013 17:57:00" />
+  </publishProfile>
+</publishData>

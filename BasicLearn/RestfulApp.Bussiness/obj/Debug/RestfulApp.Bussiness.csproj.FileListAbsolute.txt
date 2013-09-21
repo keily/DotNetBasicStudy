@@ -1,0 +1,5 @@
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.Bussiness\bin\Debug\RestfulApp.Bussiness.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.Bussiness\bin\Debug\RestfulApp.Bussiness.pdb
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.Bussiness\obj\Debug\ResolveAssemblyReference.cache
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.Bussiness\obj\Debug\RestfulApp.Bussiness.dll
+F:\LearnCenter\dotnet\面试\DotNetBasicStudy\BasicLearn\RestfulApp.Bussiness\obj\Debug\RestfulApp.Bussiness.pdb

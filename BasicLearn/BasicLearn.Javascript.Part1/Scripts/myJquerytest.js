@@ -7,7 +7,7 @@ jQuery(function () {
     console.log("ready!");
     $("#main").html("<p>sss</p>");
     $("#main p").addClass("background-color:red;");
-    $("<p style=\"background-color:red;\">123</p>").appendTo("#main");
+    //$("<p style=\"background-color:red;\">123</p>").appendTo("#main");
 
     var $myhref = $("<a/>", {
         html: "This is a <strong>new</strong> link",
