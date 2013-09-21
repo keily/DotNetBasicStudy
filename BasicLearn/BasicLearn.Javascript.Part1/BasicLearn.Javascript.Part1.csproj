@@ -54,7 +54,10 @@
     <Content Include="Index.aspx" />
     <Content Include="JqueryTest.htm" />
     <Content Include="JsBasicTest.htm" />
+    <Content Include="Scripts\argsCollect.js" />
+    <Content Include="Scripts\Closure.js" />
     <Content Include="Scripts\JsHierarchy.js" />
+    <Content Include="Scripts\KAjax.js" />
     <Content Include="Scripts\myJquerytest.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />

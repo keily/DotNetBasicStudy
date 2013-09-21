@@ -76,6 +76,26 @@ console.log(user.getname());
 console.log(user.getage());
 user.setage(22);
 console.log(user.getname());
-console.log(user.getage()); 
+console.log(user.getage());
 
+//一下的绑定click事件i的值每次output为e.length-1
+function bindingClickEvent(e) {
+    var objControl = e;
+    for (var i = 0; i < e.length; i++) {
+        objControl[i].onclick = function () {
+            console.log(i);
+        }
+    }
+}
+//闭包绑定
+function bindingClickEvent(e) {
+    var objControl = e;
+    for (var i = 0; i < e.length; i++) {
+        (function (m) {
+            objControl[i].onclick = function () {
+                console.log(m);
+            }
+        })(i);
+    }
+}
 
