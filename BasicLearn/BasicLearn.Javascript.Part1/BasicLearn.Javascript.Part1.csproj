@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BaiduMapDemo.htm" />
-    <Content Include="Drag.htm" />
+    <Content Include="html5.htm" />
     <Content Include="Index.aspx" />
     <Content Include="JqueryTest.htm" />
     <Content Include="JsBasicTest.htm" />
