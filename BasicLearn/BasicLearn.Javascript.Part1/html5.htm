@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        .libtn{ width:80px;height:20px;display:block;}
+        .content{float:left; width:200px; height:200px; margin:10px;padding:10px;border:1px solid #aaaaaa;display:inline;}
+        .canvas{display:block; background-color:Orange;}
+    </style>
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+    <script type="text/javascript">
+        function allowdrag(e) {
+            e.preventDefault();
+        }
+        function drop(e) {
+            e.preventDefault();
+            var _data = e.dataTransfer.getData("Text");
+            e.target.appendChild(document.getElementById(_data));
+        }
+        function drag(e) {
+            e.dataTransfer.setData("Text", e.target.id);
+        }
+        window.onload = function () {
+            var can1 = document.getElementById("can1");
+            var cxt = can1.getContext("2d");
+            cxt.fillStyle = "#FFFFCC";
+            //cxt.fillRect(0, 0, 200, 100);
+
+            cxt.moveTo(0, 100);
+            cxt.lineTo(200, 0);
+            cxt.stroke();
+
+            cxt.beginPath();
+            cxt.arc(70, 18, 15, 0, Math.PI * 2, true);
+            cxt.closePath();
+            cxt.fill();
+
+        }
+    </script>
+</head>
+<body>
+    <div id="left" ondrop="drop(event)" ondragover="allowdrag(event)" class="content">
+        <button id="btn1" class="libtn" draggable="true" ondragstart="drag(event)"></button>
+    </div>
+    <div id="right" ondrop="drop(event)" ondragover="allowdrag(event)" class="content">
+        <button id="btn2" class="libtn" draggable="true" ondragstart="drag(event)"></button>
+    </div>
+    <canvas id="can1" width="200px" hight="100px"></canvas>
+    <div id="svgSpark">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+          <polygon points="100,10 40,180 190,60 10,60 160,180"
+          style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+    </div>
+</body>
+</html>
